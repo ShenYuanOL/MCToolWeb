@@ -48,3 +48,5 @@ import SupportIcon from './icons/IconSupport.vue'
     致力于打造优秀的 Minecraft 基岩版社区
   </WelcomeItem>
 </template>
+
+
