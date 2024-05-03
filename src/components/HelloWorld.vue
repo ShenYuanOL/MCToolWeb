@@ -24,6 +24,13 @@ h1 {
   top: -10px;
 }
 
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 3px;
+}
+
 h3 {
   font-size: 1.2rem;
 }
@@ -34,6 +41,7 @@ h3 {
 }
 
 @media (min-width: 1024px) {
+
   .greetings h1,
   .greetings h3 {
     text-align: left;

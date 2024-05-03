@@ -9,3 +9,8 @@ export default {
   name: 'App'
 }
 </script>
+
+<style scoped>
+@import './assets/main.css';
+
+</style>

@@ -12,23 +12,32 @@ export default {
 </script>
 
 <template>
-    <header>
-        <img alt="Vue logo" class="logo" src="@/assets/Minecraft.png" width="125" height="125" />
+    <div id="app">
+        <header>
+            <img alt="Vue logo" class="logo" src="@/assets/Minecraft.png" width="125" height="125" />
     
-        <div class="wrapper">
-            <HelloWorld msg="Minecraft Tool" />
+            <div class="wrapper">
+                <HelloWorld msg="Minecraft Tool" class="hello" />
     
-            <nav>
-                <RouterLink to="/Home">Start</RouterLink>
-            </nav>
-        </div>
-        <div class="right">
-            <TheWelcome />
-        </div>
-    </header>
+                <nav>
+                    <RouterLink to="/Home">Start</RouterLink>
+                </nav>
+            </div>
+            <div class="right">
+                <TheWelcome />
+            </div>
+        </header>
+    </div>
 </template>
 
 <style scoped>
+#app {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-weight: normal;
+}
+
 header {
     line-height: 1.5;
     max-height: 100vh;
@@ -65,6 +74,7 @@ nav a:first-of-type {
 }
 
 @media (min-width: 1024px) {
+
     header {
         width: 1280px;
         display: flex;
@@ -89,6 +99,27 @@ nav a:first-of-type {
 
         padding: 1rem 0;
         margin-top: 1rem;
+    }
+
+    #app {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding:0 2rem;
+        margin: 250px auto;
+    }
+}
+
+a,
+.green {
+    text-decoration: none;
+    color: hsla(160, 100%, 37%, 1);
+    transition: 0.4s;
+    padding: 3px;
+}
+
+@media (hover: hover) {
+    a:hover {
+        background-color: hsla(160, 100%, 37%, 0.2);
     }
 }
 </style>
