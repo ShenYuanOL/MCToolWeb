@@ -7,11 +7,6 @@ export default {
   components: {
     HelloWorld,
     TheWelcome,
-  },
-  methods: {
-    showLogdialog() {
-      router.replace('/Home')
-    }
   }
 }
 </script>
@@ -25,13 +20,12 @@ export default {
     
             <nav>
                 <RouterLink to="/Home">Start</RouterLink>
-                <button class="btns" type="button" @click="showLogdialog()">登录</button>
             </nav>
         </div>
+        <div class="right">
+            <TheWelcome />
+        </div>
     </header>
-    <div class="right">
-        <TheWelcome />
-    </div>
 </template>
 
 <style scoped>
@@ -39,8 +33,6 @@ header {
     line-height: 1.5;
     max-height: 100vh;
 }
-
-
 
 .logo {
     display: block;
@@ -74,6 +66,7 @@ nav a:first-of-type {
 
 @media (min-width: 1024px) {
     header {
+        width: 1280px;
         display: flex;
         place-items: center;
         padding-right: calc(var(--section-gap) / 2);
