@@ -20,7 +20,7 @@ export default {
     }
   },
   mounted() {
-    setInterval(() => {
+    setInterval (() => {
       let date = new Date();
       this.hour = date.getHours();
       this.minute = date.getMinutes();

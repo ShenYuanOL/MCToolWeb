@@ -26,9 +26,9 @@ export default {
   },
   methods: {
     change() {
-      if (this.head_statue == 'head_show') {
+      if (this.head_statue === 'head_show') {
         this.head_statue = 'head_hide'
-      } else if (this.head_statue == 'head_hide') {
+      } else if (this.head_statue === 'head_hide') {
         this.head_statue = 'head_show'
       }
     }
@@ -61,7 +61,7 @@ body {
         height: 100vh;
         background-color: white;
         border: 1px solid black;
-        border-radius: 20px 20px 0px 0px;
+        border-radius: 20px 20px 0 0;
     }
 }
 </style>
