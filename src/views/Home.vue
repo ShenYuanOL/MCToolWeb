@@ -1,8 +1,11 @@
 <template>
-    <div class="head">
+    <div :class="head_statue">
         <div></div>
         <Clock class="clock" />
         <div></div>
+    </div>
+    <div class="hinder">
+        <button @click="change">^</button>
     </div>
     <div class="main">
     
@@ -13,17 +16,29 @@
 import Clock from '../components/Clock.vue'
 
 export default {
+  data() {
+    return {
+      head_statue: 'head_show',
+    }
+  },
   components: {
     Clock
   },
+  methods: {
+    change() {
+      if (this.head_statue == 'head_show') {
+        this.head_statue = 'head_hide'
+      } else if (this.head_statue == 'head_hide') {
+        this.head_statue = 'head_show'
+      }
+    }
+  }
 }
 </script>
 
 <style lang="scss" scoped>
-* {
-    position: relative;
-    .head {
-        background-image: linear-gradient(rgba(255, 255, 255), rgb(181, 255, 187));
+body {
+    .head_show {
         width: 100%;
         height: 350px;
         display: grid;
@@ -31,10 +46,17 @@ export default {
         align-content: center;
     }
 
+    .head_hide {
+        display: none;
+    }
+
+    .hinder {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
     .main {
-        position: absolute;
-        top: 35%;
-        z-index: 1;
         width: 100%;
         height: 100vh;
         background-color: white;
