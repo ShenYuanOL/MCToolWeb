@@ -8,7 +8,7 @@
         <button @click="change">^</button>
     </div>
     <div class="main">
-    
+        
     </div>
 </template>
 
