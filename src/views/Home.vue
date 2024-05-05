@@ -1,35 +1,46 @@
 <template>
-    <div :class="head_statue">
-        <div></div>
-        <Clock class="clock" />
-        <div></div>
-    </div>
-    <div class="hinder">
-        <button @click="change">^</button>
-    </div>
-    <div class="main">
-        
-    </div>
+  <div class="head">
+    <div></div>
+    <Clock class="clock" />
+    <div></div>
+  </div>
+  <div class="hinder">
+    <button @click="change">^</button>
+  </div>
+  <div :class="main_statue">
+    <Menu imglink="src\assets\Minecraft.png" tool_name="menutest" />
+    <Menu imglink="src\assets\Minecraft.png" tool_name="menutest" />
+    <Menu imglink="src\assets\Minecraft.png" tool_name="menutest" />
+    <Menu imglink="src\assets\Minecraft.png" tool_name="menutest" />
+    <Menu imglink="src\assets\Minecraft.png" tool_name="menutest" />
+    <Menu imglink="src\assets\Minecraft.png" tool_name="menutest" />
+    <Menu imglink="src\assets\Minecraft.png" tool_name="menutest" />
+    <Menu imglink="src\assets\Minecraft.png" tool_name="menutest" />
+    <Menu imglink="src\assets\Minecraft.png" tool_name="menutest" />
+    <Menu imglink="src\assets\Minecraft.png" tool_name="menutest" />
+  </div>
 </template>
 
 <script>
 import Clock from '../components/Clock.vue'
+import Menu from '../components/menu.vue'
 
 export default {
   data() {
     return {
-      head_statue: 'head_show',
+      main_statue: 'main_show',
     }
   },
   components: {
-    Clock
+    Clock,
+    Menu
   },
   methods: {
     change() {
-      if (this.head_statue === 'head_show') {
-        this.head_statue = 'head_hide'
-      } else if (this.head_statue === 'head_hide') {
-        this.head_statue = 'head_show'
+      if (this.main_statue === 'main_show') {
+        this.main_statue = 'main_hide'
+      } else if (this.main_statue === 'main_hide') {
+        this.main_statue = 'main_show'
       }
     }
   }
@@ -38,30 +49,34 @@ export default {
 
 <style lang="scss" scoped>
 body {
-    .head_show {
-        width: 100%;
-        height: 350px;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        align-content: center;
-    }
+  .head {
+    width: 100%;
+    height: 350px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-content: center;
+  }
 
-    .head_hide {
-        display: none;
-    }
 
-    .hinder {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
+  .hinder {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 
-    .main {
-        width: 100%;
-        height: 100vh;
-        background-color: white;
-        border: 1px solid black;
-        border-radius: 20px 20px 0 0;
-    }
+  .main_hide {
+    display: none;
+  }
+
+  .main_show {
+    width: 100%;
+    height: 100vh;
+    padding: 25px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 20px 20px 0 0;
+  }
 }
 </style>
