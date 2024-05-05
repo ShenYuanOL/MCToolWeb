@@ -12,6 +12,7 @@
 
 <script>
 export default {
+  name: 'Clock',
   data() {
     return {
       hour: '',

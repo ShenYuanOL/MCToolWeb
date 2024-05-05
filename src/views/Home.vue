@@ -26,6 +26,7 @@ import Clock from '../components/Clock.vue'
 import Menu from '../components/Menu.vue'
 
 export default {
+  name: 'Home',
   data() {
     return {
       main_show: true,

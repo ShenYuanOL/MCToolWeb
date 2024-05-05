@@ -3,6 +3,7 @@ import HelloWorld from '../components/HelloWorld.vue'
 import TheWelcome from '../components/TheWelcome.vue'
 
 export default {
+  name: 'Door',
   components: {
     HelloWorld,
     TheWelcome,
@@ -11,116 +12,115 @@ export default {
 </script>
 
 <template>
-    <div id="app">
-        <header>
-            <img alt="Vue logo" class="logo" src="@/assets/Minecraft.png" width="125" height="125" />
-    
-            <div class="wrapper">
-                <HelloWorld msg="Minecraft Tool" class="hello" />
-    
-                <nav>
-                    <RouterLink to="/Home">Start</RouterLink>
-                </nav>
-            </div>
-            <div class="right">
-                <TheWelcome />
-            </div>
-        </header>
-    </div>
+  <div id="app">
+    <header>
+      <img alt="Vue logo" class="logo" src="@/assets/Minecraft.png" width="125" height="125"/>
+
+      <div class="wrapper">
+        <HelloWorld msg="Minecraft Tool" class="hello"/>
+
+        <nav>
+          <RouterLink to="/Home">Start</RouterLink>
+        </nav>
+      </div>
+      <div class="right">
+        <TheWelcome/>
+      </div>
+    </header>
+  </div>
 </template>
 
 <style scoped>
 #app {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 2rem;
-    font-weight: normal;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
 }
 
 header {
-    line-height: 1.5;
-    max-height: 100vh;
+  line-height: 1.5;
+  max-height: 100vh;
 }
-
 
 
 .logo {
-    display: block;
-    margin: 0 auto 2rem;
+  display: block;
+  margin: 0 auto 2rem;
 }
 
 nav {
-    width: 100%;
-    font-size: 12px;
-    text-align: center;
-    margin-top: 2rem;
+  width: 100%;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 2rem;
 }
 
 nav a.router-link-exact-active {
-    color: var(--color-text);
+  color: var(--color-text);
 }
 
 nav a.router-link-exact-active:hover {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 nav a {
-    display: inline-block;
-    padding: 0 1rem;
-    border-left: 1px solid var(--color-border);
+  display: inline-block;
+  padding: 0 1rem;
+  border-left: 1px solid var(--color-border);
 }
 
 nav a:first-of-type {
-    border: 0;
+  border: 0;
 }
 
 @media (min-width: 1024px) {
 
-    header {
-        width: 1280px;
-        display: flex;
-        place-items: center;
-        padding-right: calc(var(--section-gap) / 2);
-    }
+  header {
+    width: 1280px;
+    display: flex;
+    place-items: center;
+    padding-right: calc(var(--section-gap) / 2);
+  }
 
-    .logo {
-        margin: 0 2rem 0 0;
-    }
+  .logo {
+    margin: 0 2rem 0 0;
+  }
 
-    header .wrapper {
-        display: flex;
-        place-items: flex-start;
-        flex-wrap: wrap;
-    }
+  header .wrapper {
+    display: flex;
+    place-items: flex-start;
+    flex-wrap: wrap;
+  }
 
-    nav {
-        text-align: left;
-        margin-left: -1rem;
-        font-size: 1rem;
+  nav {
+    text-align: left;
+    margin-left: -1rem;
+    font-size: 1rem;
 
-        padding: 1rem 0;
-        margin-top: 1rem;
-    }
+    padding: 1rem 0;
+    margin-top: 1rem;
+  }
 
-    #app {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        padding:0 2rem;
-        margin: 250px auto;
-    }
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+    margin: 250px auto;
+  }
 }
 
 a,
 .green {
-    text-decoration: none;
-    color: hsla(160, 100%, 37%, 1);
-    transition: 0.4s;
-    padding: 3px;
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 3px;
 }
 
 @media (hover: hover) {
-    a:hover {
-        background-color: hsla(160, 100%, 37%, 0.2);
-    }
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
 }
 </style>
