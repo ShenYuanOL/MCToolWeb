@@ -7,7 +7,7 @@
   <div class="hinder">
     <button @click="main_show=!main_show">^</button>
   </div>
-  <div class="main" :style="{display: main_show ? 'flex' : 'none'}">
+  <div class="main" v-show="main_show">
     <Menu imglink="src\assets\Minecraft.png" tool_name="menutest"/>
     <Menu imglink="src\assets\Minecraft.png" tool_name="menutest"/>
     <Menu imglink="src\assets\Minecraft.png" tool_name="menutest"/>
@@ -56,6 +56,7 @@ body {
   }
 
   .main {
+    display: flex;
     width: 100%;
     height: 100vh;
     padding: 25px 10px;
