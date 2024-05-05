@@ -1,48 +1,39 @@
 <template>
   <div class="head">
     <div></div>
-    <Clock class="clock" />
+    <Clock class="clock"/>
     <div></div>
   </div>
   <div class="hinder">
-    <button @click="change">^</button>
+    <button @click="main_show=!main_show">^</button>
   </div>
-  <div :class="main_statue">
-    <Menu imglink="src\assets\Minecraft.png" tool_name="menutest" />
-    <Menu imglink="src\assets\Minecraft.png" tool_name="menutest" />
-    <Menu imglink="src\assets\Minecraft.png" tool_name="menutest" />
-    <Menu imglink="src\assets\Minecraft.png" tool_name="menutest" />
-    <Menu imglink="src\assets\Minecraft.png" tool_name="menutest" />
-    <Menu imglink="src\assets\Minecraft.png" tool_name="menutest" />
-    <Menu imglink="src\assets\Minecraft.png" tool_name="menutest" />
-    <Menu imglink="src\assets\Minecraft.png" tool_name="menutest" />
-    <Menu imglink="src\assets\Minecraft.png" tool_name="menutest" />
-    <Menu imglink="src\assets\Minecraft.png" tool_name="menutest" />
+  <div class="main" :style="{display: main_show ? 'flex' : 'none'}">
+    <Menu imglink="src\assets\Minecraft.png" tool_name="menutest"/>
+    <Menu imglink="src\assets\Minecraft.png" tool_name="menutest"/>
+    <Menu imglink="src\assets\Minecraft.png" tool_name="menutest"/>
+    <Menu imglink="src\assets\Minecraft.png" tool_name="menutest"/>
+    <Menu imglink="src\assets\Minecraft.png" tool_name="menutest"/>
+    <Menu imglink="src\assets\Minecraft.png" tool_name="menutest"/>
+    <Menu imglink="src\assets\Minecraft.png" tool_name="menutest"/>
+    <Menu imglink="src\assets\Minecraft.png" tool_name="menutest"/>
+    <Menu imglink="src\assets\Minecraft.png" tool_name="menutest"/>
+    <Menu imglink="src\assets\Minecraft.png" tool_name="menutest"/>
   </div>
 </template>
 
 <script>
 import Clock from '../components/Clock.vue'
-import Menu from '../components/menu.vue'
+import Menu from '../components/Menu.vue'
 
 export default {
   data() {
     return {
-      main_statue: 'main_show',
+      main_show: true,
     }
   },
   components: {
     Clock,
     Menu
-  },
-  methods: {
-    change() {
-      if (this.main_statue === 'main_show') {
-        this.main_statue = 'main_hide'
-      } else if (this.main_statue === 'main_hide') {
-        this.main_statue = 'main_show'
-      }
-    }
   }
 }
 </script>
@@ -64,15 +55,10 @@ body {
     justify-content: center;
   }
 
-  .main_hide {
-    display: none;
-  }
-
-  .main_show {
+  .main {
     width: 100%;
     height: 100vh;
     padding: 25px 10px;
-    display: flex;
     flex-wrap: wrap;
     background-color: white;
     border: 1px solid black;
