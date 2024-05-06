@@ -23,15 +23,15 @@ export default {
 
 <style lang="scss" scoped>
 .menuitem {
-  width: 20%;
+  border: 1px solid #000000;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
   img {
-    width: 100px;
-    height: 100px;
+    width: 20%;
+    border-radius: 10%;
   }
 
   p {
