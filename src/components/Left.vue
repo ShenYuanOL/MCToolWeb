@@ -1,7 +1,7 @@
 <template>
     <div class="user">
         <div class="card">
-            <img />
+            <img  alt="" src=""/>
             <div class="info">
                 <p>username</p>
                 <div class="tips">

@@ -1,8 +1,8 @@
 <template>
-    <div class="public-messagae">
+    <div class="announcement">
         <h2>公告</h2>
     </div>
-    <div class="action">
+    <div class="activities">
         <h2>活动</h2>
     </div>
     <div class="AD">

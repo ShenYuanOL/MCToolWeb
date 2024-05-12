@@ -1,6 +1,6 @@
 <template>
-  <div class="menuitem">
-    <img :src="imglink" alt="" />
+  <div class="menu-item">
+    <img :src="img_link" alt="" />
     <p>{{tool_name}}</p>
   </div>
 </template>
@@ -9,7 +9,7 @@
 export default {
   name: 'Menu',
   props: {
-    imglink: {
+    img_link: {
       type: String,
       required: true
     },
@@ -22,7 +22,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.menuitem {
+.menu-item {
   border: 1px solid #000000;
   display: flex;
   flex-direction: column;
